@@ -11,7 +11,6 @@ function Navbars() {
   return (
     <Navbar expand="lg" bg="light" variant="light" fixed="top" className="shadow-sm py-3">
       <Container>
-        {/* Logo */}
         <Navbar.Brand href="#home">
           <img
             src="src/assets/Sasken-Logo_Theme.webp"
@@ -25,23 +24,25 @@ function Navbars() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Left Links */}
-          <Nav className="mx-auto text-uppercase">
-            <Nav.Link href="#industry-offerings">Industry Offerings</Nav.Link>
-            <Nav.Link href="#digital-engineering">Digital Engineering</Nav.Link>
-            <Nav.Link href="#product-engineering">Product Engineering</Nav.Link>
-            <Nav.Link href="#resources">Resources</Nav.Link>
-            <Nav.Link href="#about-us">About Us</Nav.Link>
-          </Nav>
+         <Nav className="mx-auto text-uppercase fw-semibold align-items-center">
+  <Nav.Link href="#industry-offerings" className="mx-3">Industry Offerings</Nav.Link>
+  <Nav.Link href="#digital-engineering" className="mx-3">Digital Engineering</Nav.Link>
+  <Nav.Link href="#product-engineering" className="mx-3">Product Engineering</Nav.Link>
+  <Nav.Link href="#resources" className="mx-3">Resources</Nav.Link>
+  <Nav.Link href="#about-us" className="mx-3">About Us</Nav.Link>
+</Nav>
+
 
           {/* Right Button */}
           <Nav className="ms-auto">
             {/* Globe icon */}
             <Nav.Link href="#">
-              <FontAwesomeIcon icon={faGlobe} size="xl" style={{ color: "#34005f" }} />
+              <FontAwesomeIcon icon={faGlobe} size="xl" className="me-3 pt-2" style={{ color: "#34005f" }} />
             </Nav.Link>
 
             <Nav.Link href="#contact">
-              <button className="btn btn-danger">Contact Us</button>
+              <button className="btn btn-danger rounded px-4 py-2 fw-semibold " style={{ backgroundColor:"#f94c30",boxShadow: "0px 4px 8px #d43c24"
+              }}>Contact Us</button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
