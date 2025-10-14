@@ -13,7 +13,7 @@ function Navbars() {
       <Container>
         <Navbar.Brand href="#home">
           <img
-            src="src/assets/Sasken-Logo_Theme.webp"
+            src="./public/Sasken-Logo_Theme.webp"
             alt="logo"
             width="100"
             height="auto"
