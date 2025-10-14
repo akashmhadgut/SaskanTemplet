@@ -1,0 +1,205 @@
+
+
+.sector-card {
+  transition: 
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    box-shadow 0.4s ease;
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+.sector-card.active {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  background-color: white;
+}
+
+
+.services-section {
+  background-color: #f7f7fc; /* soft background */
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.digital-services {
+  font-size: 36px;
+  font-weight: 800;
+  color: #260057;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.digital-services::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #f94c30;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-digital {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 400;
+}
+
+/* ====== Section Styling ====== */
+.services-section {
+  text-align: center;
+  padding: 80px 40px;
+  background: linear-gradient(to bottom right, #f9fafc, #ffffff);
+  font-family: 'Poppins', sans-serif;
+}
+
+.digital-services {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2b0063;
+  margin-bottom: 10px;
+}
+
+.about-degitil {
+  font-size: 16px;
+  color: #6c6c6c;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+/* ====== Grid Layout ====== */
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* ====== Individual Card ====== */
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  padding: 40px 30px;
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* initial line width */
+  height: 5px;
+  background: linear-gradient(90deg, #ff5c35, #ff885a);
+  transition: width 0.5s ease; /* smooth growth */
+}
+
+/* Hover effect */
+.service-card:hover::before {
+  width: 100%; /* line grows across the card */
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ====== Card Content ====== */
+.service-icon {
+  font-size: 40px;
+  color: #ff5c35;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.service-card h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2b0063;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ====== Learn More Link ====== */
+.service-card a {
+  color: #ff5c35;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.service-card a span {
+  font-size: 16px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.service-card a:hover span {
+  transform: translateX(5px);
+}
+
+.service-card a:hover {
+  color: #ff885a;
+}
+
+.service-para{
+font-size: 16px;
+  color: #6c6c6c;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;  
+} 
+
+
+
+.connect-section {
+  text-align: center;
+  padding: 30px 20px;
+  color: #3c0066;
+  font-family: 'Poppins', sans-serif;
+}
+
+.connect-section .infoline {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1.2rem auto;
+  font-weight: 500;
+}
+
+.connectbtn {
+  background-color: #ff5a3c;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+.connectbtn:hover {
+  background-color: #e0482b;
+  transform: translateY(-2px);
+}

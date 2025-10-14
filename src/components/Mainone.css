@@ -1,0 +1,415 @@
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* Make sure containers don't overflow */
+.expertise-container,
+.services-cards,
+.excellence-cards,
+.footer-content {
+  max-width: 100%;
+}
+
+
+/* --- Design Tokens --- */
+.sasken-parallax-spotlight-lite {
+  --brand-primary: #f94c30;
+  --brand-primary-light: #ff6a50;
+  --brand-dark: #34005f;
+  --text-dark: #34005f;
+  --text-subtle: #64748b;
+  --text-on-dark-heading: #FFFFFF;
+  --bg-light-alt: #e6e4f0;
+  --bg-white: #ffffff;
+  --gradient-primary: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-primary-light) 100%);
+  --gradient-primary-alt: linear-gradient(45deg, var(--brand-primary) 0%, var(--brand-primary-light) 100%);
+  --radius-button: 8px;
+  --radius-card: 16px;
+  --radius-circle: 50%;
+  --shadow-card: 0 10px 40px rgba(15, 23, 42, 0.07);
+  --shadow-button: 0 6px 20px rgba(249, 76, 48, 0.2);
+  --shadow-button-hover: 0 10px 30px rgba(249, 76, 48, 0.25);
+  --padding-button: 14px 40px;
+  padding: 70px 0;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  background-color: var(--bg-light-alt);
+}
+
+.sasken-parallax-spotlight-lite,
+.sasken-parallax-spotlight-lite * {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sasken-parallax-spotlight-lite .sps-icon i {
+  font-family: "Font Awesome 5 Free", "Font Awesome 6 Free", FontAwesome, sans-serif;
+}
+
+/* --- Backgrounds --- */
+.sasken-parallax-spotlight-lite::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 25% 45%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.92) 25%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+  background-attachment: fixed;
+}
+
+.sasken-parallax-spotlight-lite::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('https://www.sasken.com/hubfs/BG_3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* --- Layout --- */
+.sasken-parallax-spotlight-lite .sps-container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.sasken-parallax-spotlight-lite .sps-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+}
+
+/* --- Sticky Left Content --- */
+.sasken-parallax-spotlight-lite .sps-sticky-content {
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+  align-self: start;
+  padding: 15px;
+}
+
+/* --- Header --- */
+.sasken-parallax-spotlight-lite .sps-header .sps-title {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sasken-parallax-spotlight-lite .sps-header .sps-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 5px;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+}
+
+.sasken-parallax-spotlight-lite .sps-header .sps-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-subtle);
+  max-width: 400px;
+}
+
+/* --- Navigation --- */
+.sasken-parallax-spotlight-lite .sps-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0 0;
+}
+
+.sasken-parallax-spotlight-lite .sps-nav-item a {
+  color: var(--brand-dark);
+  font-size: 17px;
+  font-weight: 500;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.sasken-parallax-spotlight-lite .sps-nav-item a::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background-color: var(--brand-primary);
+  transition: height 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.sasken-parallax-spotlight-lite .sps-nav-item a:hover,
+.sasken-parallax-spotlight-lite .sps-nav-item.active a {
+  font-weight: 700;
+}
+
+.sasken-parallax-spotlight-lite .sps-nav-item.active a {
+  padding-left: 5px;
+}
+
+.sasken-parallax-spotlight-lite .sps-nav-item.active a::before {
+  height: 100%;
+}
+
+/* --- Cards --- */
+.sasken-parallax-spotlight-lite .sps-industry-card {
+  border-radius: var(--radius-card);
+  padding: 35px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.4s;
+  transform: scale(1);
+  opacity: 1;
+  will-change: transform, opacity, border-color, background-color, backdrop-filter;
+}
+
+.sasken-parallax-spotlight-lite .sps-scrolling-content.is-focused .sps-industry-card {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.sasken-parallax-spotlight-lite .sps-scrolling-content.is-focused .sps-industry-card.is-active-card {
+  transform: scale(1);
+  opacity: 1;
+  border-color: rgba(249, 76, 48, 0.7);
+  background-color: var(--bg-white);
+  backdrop-filter: none;
+}
+
+/* --- Card Content --- */
+.sasken-parallax-spotlight-lite .sps-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 13px;
+  line-height: 1;
+}
+
+.sasken-parallax-spotlight-lite .sps-icon {
+  font-size: 32px;
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.sasken-parallax-spotlight-lite .sps-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--brand-dark);
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+}
+
+.sasken-parallax-spotlight-lite .sps-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-subtle);
+  margin: 7px 0 17px;
+}
+
+.sasken-parallax-spotlight-lite .sps-submenu-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 18px;
+}
+
+.sasken-parallax-spotlight-lite .sps-submenu-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.sasken-parallax-spotlight-lite .sps-submenu-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--gradient-primary-alt);
+  border-radius: var(--radius-circle);
+  box-shadow: 0 2px 4px rgba(249, 76, 48, 0.2);
+  transition: all 0.2s ease;
+}
+
+.sasken-parallax-spotlight-lite .sps-submenu-list li:hover::before {
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: 0 3px 8px rgba(249, 76, 48, 0.3);
+}
+
+.sasken-parallax-spotlight-lite .sps-submenu-list a {
+  color: var(--brand-primary);
+  text-decoration: none;
+  transition: all 0.18s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.sasken-parallax-spotlight-lite .sps-submenu-list a:hover {
+  color: var(--brand-dark);
+  padding-left: 4px;
+}
+
+.sasken-parallax-spotlight-lite .sps-learn-more {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.sasken-parallax-spotlight-lite .sps-learn-more .sps-arrow {
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.sasken-parallax-spotlight-lite .sps-learn-more:hover {
+  color: var(--brand-dark);
+}
+
+.sasken-parallax-spotlight-lite .sps-learn-more:hover .sps-arrow {
+  transform: translateX(5px);
+}
+
+/* --- Footer & CTA --- */
+.sasken-parallax-spotlight-lite .sps-footer-cta {
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.sasken-parallax-spotlight-lite .sps-outro {
+  margin-bottom: 25px;
+  color: var(--brand-dark);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.sasken-parallax-spotlight-lite .sps-general-cta-btn {
+  font-weight: 600;
+  font-size: 16px;
+  background: var(--gradient-primary-alt);
+  border: none;
+  color: var(--text-on-dark-heading);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: var(--radius-button);
+  padding: var(--padding-button);
+  box-shadow: var(--shadow-button);
+}
+
+.sasken-parallax-spotlight-lite .sps-general-cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-button-hover);
+}
+
+/* --- Responsive --- */
+@media (max-width: 991.98px) {
+  .sasken-parallax-spotlight-lite::after,
+  .sasken-parallax-spotlight-lite::before {
+    position: absolute;
+    background-attachment: scroll;
+  }
+
+  .sasken-parallax-spotlight-lite::before {
+    display: none;
+  }
+
+  .sasken-parallax-spotlight-lite {
+    padding: 40px 0;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-footer-cta {
+    margin-top: 0;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-sticky-content {
+    position: static;
+    padding: 0;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-header {
+    text-align: left;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-header .sps-title::after {
+    left: 0;
+    transform: none;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-header .sps-intro {
+    max-width: none;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-nav-list {
+    display: none;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-industry-card {
+    padding: 24px 18px 22px;
+    background-color: var(--bg-white);
+    backdrop-filter: none;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-card-title {
+    font-size: 20px;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-icon {
+    font-size: 28px;
+    min-width: 36px;
+    height: 36px;
+  }
+
+  .sasken-parallax-spotlight-lite .sps-card-title-row {
+    gap: 12px;
+  }
+}

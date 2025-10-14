@@ -1,0 +1,74 @@
+
+.contact-us-section {
+  background: #ffffff;
+  padding: 60px 20px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 91%;
+  margin: 60px auto;
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, #ff4b2b, #7a1e9c) 1;
+ 
+}
+
+.contact-content h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2e0651;
+  margin-bottom: 20px;
+}
+
+.contact-content h4 {
+  font-size: 22px;
+  color: #64748b;
+   margin-bottom: 14px;
+  font-weight: 500;
+  padding: 0px 0px 40px;
+ }
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding-top: 17px;
+    padding-right: 40px;
+    padding-bottom: 17px;
+    padding-left: 40px;
+  border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 8px 24px rgba(52, 0, 95, 0.2);
+  gap: 12px;
+}
+
+.primary-btn {
+  background-color: #2e0651;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn:hover {
+  background-color: #6504c0;
+}
+
+.secondary-btn {
+  background-color: #f8f9fc;
+  color: #2e0651;
+  border: 1px solid #d1d5db;
+}
+
+.secondary-btn:hover {
+  background-color: #e9ebf0;
+}
