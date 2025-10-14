@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer-section">
       <div className="footer-content">
         <div className="footer-left">
-          <img src="./public/image1.png" alt="Sasken Logo" className="footer-logo" />
+          <img src="/public/image1.png" alt="Sasken Logo" className="footer-logo" />
           <p className="footer-description">
             Sasken is a specialist in Product Engineering and Digital Transformation providing concept-to-market, chip-to-cognition R&D services to global leaders in Semiconductor, Automotive, Industrials, Smart Devices & Wearables, Enterprise Grade Devices, Satcom and Transportation industries.
           </p>
