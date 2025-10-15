@@ -21,7 +21,7 @@ function Navbars() {
         <Navbar.Collapse id="basic-navbar-nav">
           
           {/* Centered Nav Links */}
-          <Nav className="mx-auto text-uppercase fw-semibold align-items-center gap-3">
+          <Nav className="mx-auto text-uppercase fw-semibold align-items-center gap-1">
             <Nav.Link href="#industry-offerings" className="nav-link-custom">Industry Offerings</Nav.Link>
             <Nav.Link href="#digital-engineering" className="nav-link-custom">Digital Engineering</Nav.Link>
             <Nav.Link href="#product-engineering" className="nav-link-custom">Product Engineering</Nav.Link>

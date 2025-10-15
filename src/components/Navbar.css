@@ -1,14 +1,7 @@
 .nav-link-custom {
   color:#34005f !important;
   font-weight: 500 !important;
-  padding: 12px 10px;
-  border-radius: var(--border-radius-modern, 8px);
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
-  display: block;
+ 
 }
 
 .nav-link-custom:hover {
