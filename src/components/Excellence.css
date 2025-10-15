@@ -117,63 +117,87 @@
   font-weight: 800;
   margin: 0;
 }
-
-/* ====== Cards Section ====== */
 .excellence-cards {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 60px;
+  gap: 30px;
+
+  /* padding: 50px 0; */
 }
 
-.card {
-  background: white;
-  flex: 1 1 calc(20% - 20px);
+.excellence-card {
+  background-color:white;
+  border-radius: 20px;
+  padding: 50px 28px;
   text-align: center;
-  padding: 40px 24px;
-  border-radius: 15px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(20% - 28px);
+  min-width: 220px;
+  max-width: 260px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.excellence-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-.card .icon {
-  background-color: #ff4400e7;
-  color: white;
-  font-size: 24px;
-  padding: 16px;
-  border-radius: 12px;
-  display: inline-block;
-  margin-bottom: 16px;
-  box-shadow: 0 8px 25px rgba(249, 76, 48, 0.3);
+/* --- Icon styling --- */
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff6b3d, #ff4400);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px auto;
+  box-shadow: 0 10px 25px rgba(249, 76, 48, 0.3);
 }
 
-.card h2 {
-  font-size: 50px;
-  font-weight: bold;
+.icon-wrapper i {
+  color: #fff;
+  font-size: 26px;
+}
+
+/* --- Heading --- */
+.excellence-card h2 {
   color: #2e0651;
-  margin-bottom: 17px;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 6px;
 }
 
-.card h2 span {
+.excellence-card h2 span {
   display: block;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 700;
   color: #2e0651;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-top: 3px;
 }
 
-.card p {
-  margin-top: 10px;
+/* --- Description --- */
+.excellence-card p {
   font-size: 14px;
-  font-weight: 500;
   color: #475569;
-  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* --- Responsive layout --- */
+@media (max-width: 992px) {
+  .excellence-card {
+    flex: 1 1 calc(45% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .excellence-card {
+    flex: 1 1 100%;
+  }
 }
 
 /* ================== RESPONSIVENESS ================== */
